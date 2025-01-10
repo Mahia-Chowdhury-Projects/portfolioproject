@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahia Chowdhury's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="login-container">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-btn" onclick="login()">Login</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Welcome to My Portfolio</h1>
+            <br>
+            <style>
+                body {
+                    text-align: center;
+                }
+            </style>
+            <figure>
+                <img src=
+        "mahiachowdhuryimage.JPEG" 
+                     alt="image of me!" style="width:50%">
+                <figcaption>My name is Mahia Chowdhury. I am a passionate developer based in Queens, New York City.</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mahia Chowdhury</p>
+    </footer>
+
+    <script>
+        // Dark/Light Mode Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+
+        // Login Functionality
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'mc46@williams.edu' && password === 'Cookies123!') {
+                alert('Login successful!');
+                // You can add more functionality here, like redirecting or showing a hidden part of the page.
+            } else {
+                alert('Invalid username or password.');
+            }
+        }
+    </script>
+</body>
+</html>

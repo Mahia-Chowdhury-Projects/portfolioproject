@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    </header>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-card">
+            <br>
+            <h3>Technical Skills</h3>
+           
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Python</li>
+                <li> Data science</li>
+                <li> machine learning</li>
+            </ul>
+        </div>
+        <div class="skill-card">
+            <br>
+            <h3>Creative Skills</h3>
+            <ul>
+                <li>UI/UX Design: I attended a UI/UX design course at Williams College. </li>
+                <li>Adobe Photoshop, Illustrator: I took a video editing class at Willimas College.</li>
+                <li>Web Animation: I have an adobe web animation course certification.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mahia Chowdhury</p>
+    </footer>
+
+    <script>
+        // Dark/Light Mode Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+    
+</body>
+</html>

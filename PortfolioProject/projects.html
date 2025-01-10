@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Mahia Chowdhury</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    </header>
+
+    <main>
+        <section class="projects">
+            <h1>Projects</h1>
+            <div class="project-filter">
+                <button onclick="filterProjects('data-science')">Data Science</button>
+                <button onclick="filterProjects('AI')">AI</button>
+                <button onclick="filterProjects('machine-learning')">Machine Learning</button>
+            </div>
+
+            <div class="project-slider">
+                <div class="project-card data-science">
+                    <h3>Gender Inequality based on GDP project.</h3>
+                    <p>
+                    The Gender Inequality Project investigates the relationship between gender inequality and a country's economic performance by analyzing the correlation between the Gender Inequality Index (GII) and Gross Domestic Product (GDP) across more than 100 countries. Utilizing publicly available datasets from the World Health Organization, the data was meticulously cleaned and formatted using Python to ensure accurate and reliable analysis. Through the use of data visualization tools like Matplotlib, line graphs with lines of best fit and p-values were generated to reveal statistically significant trends linking gender equality with economic prosperity. The analysis was further enriched by integrating findings from over ten scholarly studies, providing a comprehensive understanding of how reducing gender disparities can contribute to stronger economic growth. The project aims to offer actionable insights by developing predictive models that estimate how much each country needs to reduce its GII to achieve meaningful improvements in GDP,</p>
+                    <img src="new.png" alt="Data Analysis Project"  style="width:120%">
+                </div>
+                <div class="project-card AI">
+                    <h3>COVID-19 AI Chatbot</h3>
+                    <p>
+                        The AI Chatbot I developed is designed to provide accurate and reliable information regarding COVID-19-related concerns. Built using natural language processing (NLP) techniques specifically from IBM Watson, the chatbot can understand and respond to user inquiries about COVID-19 symptoms, prevention measures, vaccination guidelines, and the latest health protocols. By sourcing data from verified health organizations like the World Health Organization (WHO) and the Centers for Disease Control and Prevention (CDC), the chatbot ensures that users receive up-to-date and trustworthy information. This project was aimed at reducing misinformation and offering immediate support to individuals seeking guidance during the pandemic, making critical health information more accessible and easier to understand.</p>
+                    <img src="chatbot.png" alt="AI Chatbot Screen Shot"  style="width:50%" >
+                </div>
+                <div class="project-card machine-learning">
+                    <h3>Machine Learning Model</h3>
+                    <p>The Global Choropleth Model I developed visualizes COVID-19 positivity rates across countries from 2020 to the present. This interactive model uses color gradients to represent the severity of positivity rates, allowing users to easily identify regions with high or low infection levels over time. By integrating real-time data from reliable sources such as the World Health Organization (WHO) and global health databases, the model dynamically updates to reflect current trends. Users can interact with the map to view country-specific statistics, track the progression of the pandemic, and analyze how different regions have been impacted throughout various stages.</p>
+                    <img src="Chlorpleth.png" alt="Machine Learning Model of chloropleth map" style="width:50%">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mahia Chowdhury</p>
+    </footer>
+
+    <script>
+        // Dark/Light Mode Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+
+        // Filter Projects based on category
+        function filterProjects(category) {
+            // Get all project cards
+            const allProjects = document.querySelectorAll('.project-card');
+            
+            // Loop through all projects and toggle visibility based on category
+            allProjects.forEach(project => {
+                if (project.classList.contains(category)) {
+                    project.style.display = 'block'; // Show project
+                } else {
+                    project.style.display = 'none'; // Hide project
+                }
+            });
+        }
+    </script>
+</body>
+</html>
