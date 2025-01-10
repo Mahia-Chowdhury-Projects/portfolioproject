@@ -8,6 +8,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Login functionality for the website creator
+
 document.getElementById('login-btn').addEventListener('click', function() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
